@@ -1,6 +1,6 @@
 # GoldRisk AI / Synorq — Eksiksiz Implementation Todo List
 
-> **Proje durumu:** Boş repo (sadece README). Sıfırdan implementasyon gerekiyor.  
+> **Proje durumu:** Phase 0 tamamlandı. Next.js 14, shadcn, TanStack Query hazır.  
 > **API Base:** `https://api.synorq.com` | **Frontend:** `app.synorq.com`  
 > **Env:** `NEXT_PUBLIC_API_BASE_URL=https://api.synorq.com`
 
@@ -10,24 +10,24 @@
 
 ### 0.1 Next.js + TypeScript Kurulumu
 
-- [ ] `npx create-next-app@14` ile Next.js 14+ (App Router) başlat
-- [ ] TypeScript strict: `noImplicitAny`, `strictNullChecks` aktif
-- [ ] ESLint + Prettier yapılandır
-- [ ] `.env.example` oluştur: `NEXT_PUBLIC_API_BASE_URL`, `NEXT_PUBLIC_APP_URL`
+- [x] `npx create-next-app@14` ile Next.js 14+ (App Router) başlat
+- [x] TypeScript strict: `noImplicitAny`, `strictNullChecks` aktif
+- [x] ESLint + Prettier yapılandır
+- [x] `.env.example` oluştur: `NEXT_PUBLIC_API_BASE_URL`, `NEXT_PUBLIC_APP_URL`
 
 ### 0.2 UI & Styling
 
-- [ ] TailwindCSS kurulumu ve yapılandırması
-- [ ] shadcn/ui init (`npx shadcn-ui@latest init`)
-- [ ] Tema/renk paleti (enterprise-friendly) ayarla
-- [ ] decimal.js ekle (NUMERIC format + tutarlılık)
-- [ ] day.js veya date-fns ekle (timezone-safe)
+- [x] TailwindCSS kurulumu ve yapılandırması
+- [x] shadcn/ui init (`npx shadcn-ui@latest init`)
+- [x] Tema/renk paleti (enterprise-friendly) ayarla
+- [x] decimal.js ekle (NUMERIC format + tutarlılık)
+- [x] day.js veya date-fns ekle (timezone-safe)
 
 ### 0.3 HTTP & State
 
-- [ ] Axios veya fetch wrapper kur
-- [ ] TanStack Query (`@tanstack/react-query`) kur
-- [ ] React Hook Form + Zod kur
+- [x] Axios veya fetch wrapper kur
+- [x] TanStack Query (`@tanstack/react-query`) kur
+- [x] React Hook Form + Zod kur
 
 ### 0.4 Proje Yapısı (FTDD §3)
 
@@ -43,17 +43,17 @@ src/
   types/
 ```
 
-- [ ] Klasör yapısını oluştur
-- [ ] `lib/api/client.ts` — typed HTTP client
-- [ ] `lib/api/endpoints.ts` — typed endpoints
-- [ ] `types/api.ts` — GramString, MoneyString, API response shapes
+- [x] Klasör yapısını oluştur
+- [x] `lib/api/client.ts` — typed HTTP client
+- [x] `lib/api/endpoints.ts` — typed endpoints
+- [x] `types/api.ts` — GramString, MoneyString, API response shapes
 
 ### 0.5 Branded Types & Formatting
 
-- [ ] `type GramString = string`, `type MoneyString = string` tanımla
-- [ ] `lib/format/money.ts` — para formatlama
-- [ ] `lib/format/gram.ts` — gram formatlama
-- [ ] `lib/format/date.ts` — tarih formatlama (timezone-aware)
+- [x] `type GramString = string`, `type MoneyString = string` tanımla
+- [x] `lib/format/money.ts` — para formatlama
+- [x] `lib/format/gram.ts` — gram formatlama
+- [x] `lib/format/date.ts` — tarih formatlama (timezone-aware)
 
 ---
 
