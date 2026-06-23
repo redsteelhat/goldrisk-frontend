@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GoldRisk Frontend
 
-## Getting Started
+GoldRisk Frontend is the web interface for GoldRisk AI, an enterprise-oriented gold trading and risk management platform.
 
-First, run the development server:
+The application provides the user-facing dashboard layer for authentication, trading/risk workflows, reporting screens and operational visibility. It is designed to work with the GoldRisk backend API.
+
+## Tech Stack
+
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **UI:** Tailwind CSS
+- **Data Fetching:** TanStack Query
+- **Forms:** React Hook Form + Zod
+- **HTTP Client:** Axios
+- **Date/Number Utilities:** Day.js, Decimal.js
+- **Icons:** Lucide React
+
+## Core Scope
+
+- Authentication screens
+- Dashboard shell
+- Gold trading and risk management workflows
+- Reporting-oriented pages
+- API-driven frontend architecture
+- Production-ready frontend structure for business software
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Quality Commands
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+npm run format:check
+npm run format
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Backend Integration
 
-## Deploy on Vercel
+This frontend should be connected to the GoldRisk backend API. Keep API base URLs, tokens and environment-specific values outside the source code by using environment variables.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Recommended local environment pattern:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+```
+
+Update this value according to the actual backend host and deployment environment.
+
+## Repository Notes
+
+This repository is kept focused on the frontend application layer. Backend services, database logic and financial domain rules should remain in the backend repository.
